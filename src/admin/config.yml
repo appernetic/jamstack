@@ -2,3 +2,5 @@ backend:
     name: github
     repo: kristyanne/jamstack # Path to your Github repository
     branch: master # Branch to update
+
+media_folder: "./src/img/uploads" # Where media uploads through the CMS should be stored
