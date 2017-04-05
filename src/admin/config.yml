@@ -1,0 +1,4 @@
+backend:
+    name: github
+    repo: kristyanne/jamstack # Path to your Github repository
+    branch: master # Branch to update
