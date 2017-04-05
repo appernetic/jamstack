@@ -1,0 +1,19 @@
+{
+    "lang": "en",
+    "name": "__SITE_NAME__",
+    "short_name": "__SITE_NAME__",
+    "description": "__SITE_DESCRIPTION__",
+    "start_url": "/",
+    "display": "browser",
+    "theme_color": "__SITE_THEME_COLOUR__",
+    "background_color": "__SITE_THEME_BACKGROUND__",
+    "icons": [{
+        "src": "/img/touch/192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+    }, {
+        "src": "/img/touch/144.png",
+        "sizes": "144x144",
+        "type": "image/png"
+    }]
+}

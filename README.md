@@ -68,6 +68,13 @@
 - Replace `owner-name/repo-name` in snippet with your repo path. Gonna leave branch as master for now.
 - Add config for media_folder: "./src/img/uploads", It'll moan if we don't add this.
 
+
+#### Collections
+
+- Collections essentially define the content types the site will have. Configuring these is essentially the same thing as creating a new custom post type in wordpress.
+- For this demo, I'm just gonna set up pages and posts.
+- Add your collection(s) to the config.yml
+
 #### Other things
 
 - Gulp (or whatever task runner) needs to compile ./src/admin to ./dist/admin so add a task for that and also add it to the overall `build` task.
@@ -75,6 +82,9 @@
 - Once the build is done, go to http://jamstack-demo.netlify.com/admin
 - If you just see 'Loading configuration', something has gone awry.
 - Check the console in dev tools. I had an error: "Error in configuration file: A `media_folder` wasn't found. Check your config.yml file.". So, it looks like the netlify cms config reqiures you to define your media location.
-
-
+- Ok, added the media_folder config now it seems to work. http://jamstack-demo.netlify.com/admin.
+- First thing you'll see is 'login with github' (Image 11)
+- Then had to authorize application so the cms has permission to access my GitHub account. Click 'Authorize Application' (Image 12) then confirm your password.
+- WOAH, got an error "Cannot read property 'replaceChild' of null" (Image 13). I *think* this is because I didn't add any collections to the config.yml. I shall try doing that.
+- Running this locally, `gulp watch` then go to http://localhost:3000/admin/index.html (THIS DID NOT WORK)
 
