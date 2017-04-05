@@ -1,0 +1,28 @@
+/* ==========================================================================
+   #HEADINGS
+   ========================================================================== */
+
+/**
+ * Default styles for headings 1 - 6.
+ *
+ * Anything more specific than the font family, weight and size or heading
+ * variations should be applied via targeted classes, rather than the default.
+ *
+ * The $project-heading-sizes should be configured on a per-project basis
+ * but these will make an ok default.
+ */
+
+$project-heading-sizes: (
+    1: 36px,
+    2: 28px,
+    3: 24px,
+    4: 20px,
+    5: 18px,
+    6: 16px
+);
+
+@for $i from 1 through 6 {
+    h#{$i} {
+        @include font-size(map-get($project-heading-sizes, $i));
+    }
+}

@@ -1,0 +1,78 @@
+/* ==========================================================================
+   #MIXINS
+   ========================================================================== */
+/**
+ * A collection of generic/handy(!) mixins.
+ */
+
+
+/**
+ * Generate a font size in rem units from a given pixel value.
+ *
+ * This is a bit of a cut down version of the inuit font-size mixin:
+ * https://github.com/inuitcss/inuitcss/blob/develop/tools/_tools.font-size.scss
+ *
+ * 1. Old IE fallback. Maybe not necessary but we'll leave this in for now (stylint doesn't
+ *    like it though).
+ * 2. Font size in rem units.
+ *
+ * @param $font-size   [size of font needed in pixels. E.g. 16px]
+ */
+/* stylelint-disable */
+@mixin font-size($font-size, $line-height: auto, $important: false) {
+    @if ($important == true) {
+        $important: !important;
+    } @else {
+        $important: null;
+    }
+
+
+    font-size: $font-size $important; // [1]
+    font-size: ($font-size / $project-font-size) * 1rem $important; // [2]
+}
+/* stylelint-enable */
+
+
+
+/**
+ * Display related mixins.
+ *
+ * 1. Visually hide an element. This is an accessibile way of "hiding" an element from view
+ *    while keeping it focusable (http://snook.ca/archives/html_and_css/hiding-content-for-accessibility)
+ *
+ * 2. Hide the text in an element.
+ *
+ * 3. http://www.cssmojo.com/the-very-latest-clearfix-reloaded/
+ *
+ */
+// [1]
+@mixin hidden-visually {
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+// [2]
+@mixin text-hide {
+    background-color: transparent;
+    border: 0;
+    color: transparent;
+    font: 0/0 a;
+    text-shadow: none;
+}
+
+// [3]
+@mixin clearfix {
+    &::after {
+        clear: both;
+        content: '';
+        display: table;
+    }
+}

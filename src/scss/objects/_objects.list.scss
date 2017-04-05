@@ -1,0 +1,26 @@
+/* ==========================================================================
+   #LIST
+   ========================================================================== */
+
+
+/**
+ * Inline list.
+ */
+.o-list-inline {
+    list-style: none;
+    margin: 0;
+}
+
+.o-list-inline__item {
+    display: inline-block;
+}
+
+
+
+/**
+ * Bare lists mate.
+ */
+.o-list-bare {
+    list-style: none;
+    margin: 0;
+}

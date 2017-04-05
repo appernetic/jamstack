@@ -1,0 +1,58 @@
+/* ==========================================================================
+   #SPACINGS
+   ========================================================================== */
+
+/**
+ * A slightly cut down version of the spacing utility from inuitcss:
+ * https://github.com/inuitcss/inuitcss
+ *
+ * Utility classes to put specific spacing values onto elements. The below loop
+ * will generate us a suite of classes like:
+ *
+ *
+ * .u-[padding | margin]-top {}
+ * .u-[padding | margin]-bottom {}
+ * .u-[padding | margin] {}
+ * .u-[padding | margin]-vertical {}
+ * .u-[padding | margin]-[top | bottom]-none
+ *
+ * It also creates variants of the above for the project spacing
+ * values declared in `settings.global`. E.g:
+ *
+ * u-[padding | margin]-top-huge {}
+ * u-[padding | margin]-bottom-small {}
+ */
+
+$u-spacing-properties: (
+    'padding': 'padding',
+    'margin': 'margin',
+) !default;
+
+$u-spacing-directions: (
+    null: null,
+    '-top': '-top',
+    '-bottom': '-bottom',
+    '-vertical': '-top' '-bottom',
+    '-horizontal': '-left' '-right'
+) !default;
+
+$u-spacing-sizes: (
+    null: $project-spacing,
+    '-medium': $project-spacing-medium,
+    '-large': $project-spacing-large,
+    '-huge': $project-spacing-huge,
+    '-none': 0
+) !default;
+
+
+@each $prop-ns, $prop in $u-spacing-properties {
+    @each $dir-ns, $dir-rules in $u-spacing-directions {
+        @each $size-ns, $size in $u-spacing-sizes {
+            .u-#{$prop-ns}#{$dir-ns}#{$size-ns} {
+                @each $dir in $dir-rules {
+                    #{$prop}#{$dir}: $size !important;
+                }
+            }
+        }
+    }
+}

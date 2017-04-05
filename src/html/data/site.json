@@ -1,0 +1,15 @@
+{
+    "name": "__SITE_NAME__",
+    "title": "__SITE_TITLE__",
+    "description": "__SITE_DESCRIPTION__",
+    "theme": {
+        "color": "__SITE_THEME_COLOUR__",
+        "background": "__SITE_THEME_BACKGROUND__"
+    },
+    "paths": {
+        "js": "/js",
+        "css": "/css",
+        "img": "/img",
+        "svg": "/svg"
+    }
+}

@@ -1,0 +1,26 @@
+/* ==========================================================================
+   #TEXT
+   ========================================================================== */
+
+/**
+ * A collection of text related utility classes.
+ */
+
+
+
+/**
+ * Text Alignment.
+ *
+ * e.g. <div class="u-text--[center | left | right ]"></div>
+ */
+$u-align-values: (
+    left,
+    right,
+    center,
+);
+
+@each $val in $u-align-values {
+    .u-text-#{$val} {
+        text-align: $val;
+    }
+}

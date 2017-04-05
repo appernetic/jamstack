@@ -1,0 +1,30 @@
+/* ==========================================================================
+   #COLOURS
+   ========================================================================== */
+
+/**
+ * Define frequently used project level (e.g. brand) colours.
+ *
+ * Note: Please remove example colours below before use in a project.
+ */
+$colours: (
+    red: (
+        default: #ff0,
+        light: #fe5656
+    )
+);
+
+
+
+/**
+ * Function to get a colour value from the above map.
+ *
+ * Example usage:
+ *
+ * Default colour:  colour(red);
+ * Shade selection: colour(red, light);
+ */
+@function colour($colour, $shade: 'default') {
+    @return map-get(map-get($colours, $colour), $shade);
+}
+

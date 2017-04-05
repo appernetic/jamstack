@@ -1,0 +1,21 @@
+/* ==========================================================================
+   #WRAPPER
+   ========================================================================== */
+
+/**
+ * Page-level constraining and wrapping elements.
+ *
+ * 1. max-width of the wrapper element (px).
+ */
+
+// [1]
+$project-wrapper-width: 1366px !default;
+
+.o-wrapper {
+    @include clearfix;
+
+    margin: 0 auto;
+    max-width: $project-wrapper-width;
+    padding-left: $project-spacing;
+    padding-right: $project-spacing;
+}

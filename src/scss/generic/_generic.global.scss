@@ -1,0 +1,45 @@
+/* ==========================================================================
+   #GLOBAL
+   ========================================================================== */
+
+/**
+ * Global level styles.
+ * These should be styles that affect elements site wide (sort of like a project
+ * specific reset).
+ *
+ * Base font sizes, colours or any other default styles for the project should be
+ * defined in here.
+ *
+ * Global config defined in: settings/_global.scss
+ *
+ * 1. Always declare margins in the same direction:
+ *    csswizardry.com/2012/06/single-direction-margin-declarations
+ */
+
+html {
+    font-family: $project-font-family;
+    font-size: ($project-font-size / 16px) * 1em;
+    line-height: $project-line-height / $project-font-size;
+}
+
+body {
+    color: $project-font-colour;
+}
+
+/* stylelint-disable */
+// [3]
+address,
+h1, h2, h3, h4, h5, h6,
+blockquote, p, pre,
+dl, ol, ul,
+figure,
+hr,
+table,
+fieldset {
+    margin-bottom: $project-spacing;
+}
+/* stylelint-enable */
+
+a {
+    color: $project-link-colour;
+}

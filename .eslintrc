@@ -1,0 +1,12 @@
+{
+	"extends": "xo",
+	"env": {
+		"browser": true,
+		"node": true
+	},
+	"rules": {
+		"indent": [2, 4],
+		"keyword-spacing": 0,
+		"space-before-function-paren": 0
+	}
+}

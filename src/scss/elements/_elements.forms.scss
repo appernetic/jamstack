@@ -1,0 +1,19 @@
+/* ==========================================================================
+   #FORMS
+   ========================================================================== */
+
+/**
+ * Default styles for <form /> and <input /> elements. All elements of
+ * this type will inherit these styles.
+ */
+
+label {
+    cursor: pointer;
+}
+
+input[type='button'],
+input[type='submit'],
+input[type='reset'],
+button[type='submit'] {
+    cursor: pointer;
+}

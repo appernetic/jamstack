@@ -1,0 +1,21 @@
+/* ==========================================================================
+   #DISPLAY
+   ========================================================================== */
+
+/**
+ * A place for display related utility classes.
+ */
+
+
+
+// Visually hide an element.
+// http://snook.ca/archives/html_and_css/hiding-content-for-accessibility)
+.u-hidden-visually {
+    @include hidden-visually;
+}
+
+
+// Good old clearfix.
+.u-clearfix {
+    @include clearfix;
+}
