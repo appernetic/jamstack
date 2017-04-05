@@ -67,7 +67,7 @@
 - See here for snippet: https://www.netlifycms.org/docs/quick-start/#configuration
 - Replace `owner-name/repo-name` in snippet with your repo path. Gonna leave branch as master for now.
 - Add config for media_folder: "./src/img/uploads", It'll moan if we don't add this.
-
+- Add config for 
 
 #### Collections
 
@@ -86,5 +86,7 @@
 - First thing you'll see is 'login with github' (Image 11)
 - Then had to authorize application so the cms has permission to access my GitHub account. Click 'Authorize Application' (Image 12) then confirm your password.
 - WOAH, got an error "Cannot read property 'replaceChild' of null" (Image 13). I *think* this is because I didn't add any collections to the config.yml. I shall try doing that.
-- Running this locally, `gulp watch` then go to http://localhost:3000/admin/index.html (THIS DID NOT WORK)
-
+- Got quite a few errors when I tried to add a post for the first time. After adding the 3rd time it seemed to work.
+- When I ran this locally, the post did get added to the live site too (kicked off a Netlify build). I suppose this is ok?
+- It also works the other way around, so, if I work on the live CMS, I can do a git pull to get the content locally. Immense.
+- To delete a post, delete the .md file from the repo and commit.

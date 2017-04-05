@@ -3,7 +3,8 @@ backend:
     repo: kristyanne/jamstack # Path to your Github repository
     branch: master # Branch to update
 
-media_folder: "./src/img/uploads" # Where media uploads through the CMS should be stored
+media_folder: "src/img/uploads" # Where media uploads through the CMS should be stored
+public_folder: "/img/uploads" # The src attribute for uploaded media will begin with /img/uploads
 
 collections:
   - name: "post"
