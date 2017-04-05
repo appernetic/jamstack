@@ -40,6 +40,7 @@
 - The build worked, but https://jamstack-demo.netlify.com gives a 404.
 - Trying again with setting the build folder to dist/ 
 - YESSSSS, definitely worked this time. ok, so because Gulp is told to build to dist in the static FE, that's what it needs to be configured as in Netlify.
+- So, in short, each time you commit to master, Netlify kicks off a build. Holla.
 
 ### Netlify CMS
 

@@ -15,7 +15,8 @@ var buildTasks = [
     'icons',
     'images',
     'fonts',
-    'static'
+    'static',
+    'admin'
 ];
 
 var productionCopy = (config.env !== config.envs.dev) && taskConfig;
