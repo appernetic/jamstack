@@ -25,7 +25,10 @@
 - Says it's using v6.10.1 of node, is it using nvmrc or is it configured to use LTS? IT USES NVMRC!
 - Then it runs `gulp build`
 - It failed! "Error deploying site: lstat /mnt/build-work/1491387070249918744/repo/netlify-build: no such file or directory" does build/target dir need to exist? (Image 4)
-
+- added empty build dir (with gitkeep), pushed. try again... (Image 5)
+- didn't do an npm install the second time - this is good.
+- worked second time! So, build dir needs to exist in project.
+- Netlify gives you a temporary url (https://jamstack-demo.netlify.com) to view the deploy. Has options to 'lock deploy', not sure what this does.
 
 
 

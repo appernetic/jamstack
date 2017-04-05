@@ -1,7 +1,6 @@
 # front-end
 .sass-cache
 node_modules
-dist
 
 # auto generated files
 
